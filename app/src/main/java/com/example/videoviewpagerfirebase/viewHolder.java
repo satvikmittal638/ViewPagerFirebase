@@ -27,9 +27,12 @@ public class viewHolder extends RecyclerView.ViewHolder {
         title.setText(obj.getTitle());
         desc.setText(obj.getDesc());
 
+
+
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
+                pBar.setVisibility(View.GONE);
                 mp.start();
             }
         });
@@ -41,8 +44,6 @@ public class viewHolder extends RecyclerView.ViewHolder {
                 mp.start();
             }
         });
-
-
 
     }
 
